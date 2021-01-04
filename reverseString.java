@@ -2,7 +2,7 @@ import java.util.*;
 import java.io.*;
 import java.lang.*;
 
-class Main
+class reverseString
 {
     public static void main(String args[])throws IOException
     {
