@@ -50,6 +50,7 @@ class GfG {
                         max = Math.max(max, temp*(i-st.peek()-1));
                 }
                 st.add(i);
+                
             }
         }
         if(!st.isEmpty()){
