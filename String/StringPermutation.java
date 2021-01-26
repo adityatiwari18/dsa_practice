@@ -11,20 +11,25 @@ class StringPermutation
 	            String s = sc.next();
 	            
 	            int l = s.length();
-	            new StringPermutation().findpermutation(s, 0, l-1);
+	            ArrayList<String> arr = new ArrayList<>();
+	            new StringPermutation().findpermutation(s, 0, l-1, arr);
+	            Collections.sort(arr);
+	            for(String i : arr){
+	                System.out.print(i+" ");
+	            }
 	            System.out.println();
 	        }
 	    }
 	 }
 	    
-	    void findpermutation(String s, int st, int l){
+	    void findpermutation(String s, int st, int l, ArrayList<String>arr){
 	        if(st==l){
-	            System.out.print(s+" ");
+	            arr.add(s);
 	        }
 	        else{
     	        for(int i=st;i<=l;i++){
     	            s = swap(s, st, i);
-    	            findpermutation(s, st+1, l);
+    	            findpermutation(s, st+1, l, arr);
     	            s = swap(s, st, i);
     	        }
 	        }
