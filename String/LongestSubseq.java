@@ -14,10 +14,6 @@ class LongestSubseq
         }
     }
 }
-// } Driver Code Ends
-
-
-//User function Template for Java
 
 class Solution
 {
